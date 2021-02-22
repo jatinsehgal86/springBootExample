@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.bciit.service1.domain;
+package com.service1.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,12 +1,12 @@
 /**
  * 
  */
-package com.bciit.service1.repository;
+package com.service1.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.bciit.service1.domain.Resource;
+import com.service1.domain.Resource;
 
 /**
  * @author user

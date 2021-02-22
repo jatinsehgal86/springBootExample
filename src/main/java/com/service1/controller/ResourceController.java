@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.bciit.service1.controller;
+package com.service1.controller;
 
 import java.util.Optional;
 
@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bciit.service1.domain.Resource;
-import com.bciit.service1.repository.ResourceRepository;
+import com.service1.domain.Resource;
+import com.service1.repository.ResourceRepository;
 
 /**
  * @author user
