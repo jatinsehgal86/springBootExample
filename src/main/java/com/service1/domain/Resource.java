@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 /**
  * @author user
@@ -21,12 +23,14 @@ public class Resource {
 	private Long id;
 	
 	@Column(name ="AGE")
+	@Min(value=1, message="Age should greater than 0")
 	private Integer age;
 	
 	@Column(name="ADDRESS")
 	private String address;
 	
 	@Column(name="NAME")
+	@NotNull
 	private String name;
 
 	/**
@@ -83,5 +87,10 @@ public class Resource {
 	 */
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "Resource [id=" + id + ", age=" + age + ", address=" + address + ", name=" + name + "]";
 	}
 }

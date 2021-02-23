@@ -24,4 +24,6 @@ public class SwaggerFoxConfig {
 	          .paths(PathSelectors.any())                          
 	          .build();                                           
 	    }
+	    
+	    
 }
