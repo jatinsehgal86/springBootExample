@@ -6,7 +6,6 @@ package com.service1.controller;
 import java.util.Optional;
 
 import javax.validation.Valid;
-import javax.websocket.server.PathParam;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +17,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.service1.domain.Resource;
@@ -34,8 +34,8 @@ public class ResourceController {
 	private ResourceRepository resourceRepository;
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(ResourceController.class);
-	@GetMapping("/getResource1/{id}")
-	public ResponseEntity<Resource> getResource(@PathVariable(name = "id") Long id) {
+	@GetMapping("/getResource1")
+	public ResponseEntity<Resource> getResource(@RequestParam(name = "id") Long id) {
 		
 		Resource resource = null;
 		Optional<Resource> optionalResource = resourceRepository.findById(id);
